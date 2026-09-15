@@ -10,7 +10,7 @@
 
 <body>
 
-        <img th:src="@{/images/BG4.webp}" alt="Logo PUC Minas">
+    <img th:src="@{/images/BG4.webp}" alt="Logo PUC Minas">
   
 <div class="container">
  <div class="login-form">
@@ -19,7 +19,7 @@
             <input type="text" id="username" name="username" placeholder="Username" required>
             <input type="password" id="password" name="password" placeholder="Senha" required>
             <div class="login-button-container">
-                <button type="submit">Entrar</button>
+                <button type="submit" th:href="@{/home}">Entrar</button>
             </div>
             <p class="login-redirect-options">
                 Ainda não tem cadastro? <br>
