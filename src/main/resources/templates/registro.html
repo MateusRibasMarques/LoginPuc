@@ -1,36 +1,38 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html lang="pt-BR" xmlns:th="http://www.thymeleaf.org">
+
 <head>
-    <title>Registro</title>
-    <link rel="stylesheet" th:href="@{/css/register.css}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" th:href="@{/css/login.css}">
 </head>
+
 <body>
-<div class="register-container">
-    <div class="register-image-logo-container">
-        <img th:src="@{/images/apc-login-bg-2.png}" alt="Logo PUC Minas">
-    </div>
 
-    <div class="register-form">
-        <h2 class="register-title">Crie sua conta</h2>
+    <img th:src="@{/images/BG4.webp}" alt="Logo PUC Minas">
 
-        <form th:action="@{/register}" method="post">
-            <input type="text" name="nome" placeholder="Nome completo" required>
-            <input type="email" name="email" placeholder="E-mail" required>
-            <input type="text" name="cpf" placeholder="CPF" required>
-            <input type="text" name="rg" placeholder="RG" required>
-            <input type="text" name="endereco" placeholder="Endereço" required>
-            <input type="text" name="instituicao" placeholder="Instituição" required>
-            <input type="password" name="senha" placeholder="Senha" required>
-
-            <div class="register-button-container">
-                <button type="submit">Registrar</button>
-            </div>
-        </form>
-
-        <div class="register-redirect-options">
-            Já possui conta? <a th:href="@{/login}">Faça login</a>
+    <div class="container">
+        <div class="login-form">
+            <form th:action="@{/register}" method="post" class="login-form">
+                <h4 class="login-title">Cadastro</h4>
+                
+                <input type="text" id="username" name="username" placeholder="Nome ou usuário" required>
+                <input type="email" id="email" name="email" placeholder="E-mail" required>
+                <input type="password" id="password" name="password" placeholder="Senha" required>
+                <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirmação da senha" required>
+                
+                <div class="login-button-container">
+                    <button type="submit">Cadastrar</button>
+                </div>
+                
+                <p class="login-redirect-options">
+                    Já possui uma conta? <br>
+                    <a th:href="@{/login}">Voltar para o Login</a>
+                </p>
+            </form>
         </div>
     </div>
-</div>
+
 </body>
 </html>
